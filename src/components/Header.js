@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <View style={styles.header}>
         <TouchableOpacity><Icon name="menu-button"/></TouchableOpacity>
-        <Text style={styles.headerText}> Home</Text>
+        <Text style={styles.headerText}>Home</Text>
         <TouchableOpacity style={{flex: 1,flexDirection: "row-reverse",paddingTop:3 }}><Icon name="notifications-button" /></TouchableOpacity>
     </View>
   );
