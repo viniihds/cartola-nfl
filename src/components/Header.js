@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
     paddingTop: 35,
     width: '100%',
     height: 75,
-    borderRadius: 10
   },
   headerText: {
     color: 'black',
