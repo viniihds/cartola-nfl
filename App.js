@@ -1,11 +1,25 @@
 import { StyleSheet, Text, View } from 'react-native';
-import Header from './src/components/Header';
-import Home from './src/components/Home'
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";import Header from './src/components/Header';
+import Home from './src/components/Home';
+import TabNavigator from './src/components/TabNavigator';
+
+const Stack = createStackNavigator();
+
+
 export default function App() {
   return (
     <View style={styles.container}>
       <Header />
-      <Home />
+      <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={TabNavigator}
+          options={{ headerShown: false }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
     </View>
   );
 }
